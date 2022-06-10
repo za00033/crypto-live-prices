@@ -10,16 +10,12 @@ module.exports = {
     },
     extend: {
       colors:{
-        blue: 'hsl(209, 59%, 35%)',
-        gold: 'hsl(37, 54%, 63%)',
-        white:  'hsl(144, 33%, 97%)',
-        lightblue1: 'hsl(205, 33%, 68%)',
-        lightgold1: '	hsl(40, 72%, 80%)',
-        lightblue2:  'hsl(203, 61%, 85%)',
-        darkblue1:  'hsl(220, 15%, 55%)',
-        darkgold1: 'hsl(29, 25%, 72%)',
-        lightblue3: 'hsl(210, 50%, 60%)',
-        lightblue4: 'hsl(202, 43%, 60%)'
+        purple: '#5e17eb',
+        green: '#c9e265',
+        pink: '#ee33c9',
+        grey: '#a6a6a6',
+        black: '#000000',
+        white: '#ffffff'
       }
     },
   },
