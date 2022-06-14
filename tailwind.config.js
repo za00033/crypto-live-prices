@@ -56,7 +56,12 @@ module.exports = {
         },
         black: '#000000',
         white: '#ffffff'
-      }
+      },
+      fontFamily: {
+        mono: ['SFMono-Regular', 'ui-monospace'/*, 'SFMono-Regular'*/],
+        sans: ['Graphik', 'sans-serif'],
+        serif: ['Merriweather', 'serif'],
+      },
     },
   },
   plugins: [],
