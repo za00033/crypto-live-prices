@@ -8,16 +8,28 @@
     <title>Portofolio Website</title>
   </head>
   <body>
+    <div class="flex container h-screen">
+      <!--flex auto height & width div-->
+      <div class="my-auto mx-auto">
+        <!--Profile Image div-->
+        <div class="py-2">
+          <img class="w-48 h-auto rounded-lg" src="ziad.png" alt="">
+        </div>
+        <!--Download CV button-->
+        <div class="w-48">
+          <a class= "self-auto mx-auto" href="Ziad_Azzabi_CV.pdf" download>
+            <button class="w-full bg-green-900 hover:bg-grey-900 rounded-lg py-2 px-5">Download CV</button>
+          </a>
+        </div>
+      </div>
+    </div>
       <!-- Navbar-->
-      <nav class="relative container mx-auto p-6">
-          <!--Flex contianer-->
+      <!--<nav class="relative container mx-auto p-6">
         <div class="flex items-center justify-between">
-            <!--Logo-->
             <div class="pt-2">
                 <img src="" alt="">
             </div>
-            <!--menu items-->
-            <div class="space-x-6 bg-white">
+            <<div class="space-x-6 bg-white">
               <a class="font-mono my-auto" style="transition-delay: 0ms;" href="/#">About</a>
               <a class="font-mono my-auto" style="transition-delay: 100ms;" href="/#">Exp</a>
               <a class="font-mono my-auto" style="transition-delay: 200ms;" href="/#">Fun/Work</a>
@@ -25,12 +37,6 @@
               <button class="bg-green-800 hover:bg-green-900 rounded-full py-2 px-5">Resume</button>
             </div>
         </div>
-        <div>
-          <a href="1.pdf" download>
-            <button class="bg-green-800 hover:bg-green-900 rounded-full py-2 px-5">Resume</button>
-          </a>
-        </div>
-      </nav>
-      <div></div>
+      </nav>-->
   </body>
 </html>
