@@ -1,6 +1,12 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
-  content: ['./*.html'],
+  content: [
+    './comp/**/*.{html,js}',
+    './index.html',
+  ],
   theme: {
     screens:{// Here we can specify the screen sizes
       sm: '480px',
@@ -10,38 +16,35 @@ module.exports = {
     },
     extend: {
       colors:{
-        purple: {
-          100: '#ffe3ff',
-          200: '#ffcaff',
-          300: '#f7b0ff',
-          400: '#dd96ff',
-          500: '#c47dff',
-          600: '#ab64ff',
-          700: '#914AFF',
-          800: '#7831FF',
-          900: '#5e17eb',
+        blue: {
+          300: '#c8fcea',
+          400: '#00e3b3',
+          500: '#00bdbf',
+          600: '#0095c0',
+          700: '#006db1',
+          800: '#004590',
+          900: '#011c61',
         },
-        green: {
-          100: '#ffffe4',
-          200: '#ffffe4',
-          300: '#ffffe4',
-          400: '#ffffe4',
-          500: '#ffffcb',
-          600: '#ffffb2',
-          700: '#fcff98',
-          800: '#e3fc7f',
-          900: '#c9e265',
+        purple: {
+          100: '#fff0ff',
+          200: '#ffd7ff',
+          300: '#ffbdff',
+          400: '#f5a3ef',
+          500: '#dc8ad6',
+          600: '#c371bd',
+          700: '#a957a3',
+          800: '#903e8a',
+          900: '#762470',
         },
         pink: {
-          100: '#ffdcff',
-          200: '#ffdcff',
-          300: '#ffdcff',
-          400: '#ffdcff',
-          500: '#ffdcff',
-          600: '#ffc3ff',
-          700: '#ffa9ff',
-          800: '#ff90f5',
-          900: '#f476db',
+          200: '#fff1ff',
+          300: '#ffd7ff',
+          400: '#ffbde9',
+          500: '#ffa4d0',
+          600: '#ff8bb7',
+          700: '#f3719d',
+          800: '#da5884',
+          900: '#c03e6a',
         },
         grey: {
           100: '#fbfbfb',
@@ -54,13 +57,31 @@ module.exports = {
           800: '#c0c0c0',
           900: '#a6a6a6',
         },
+        coral: {
+          400: '#fff1da',
+          500: '#ffd8c1',
+          600: '#ffbfa8',
+          700: '#ffa58e',
+          800: '#ff8c75',
+          900: '#f0725b',
+        },
+        orange: {
+          600: '#ffffa0',
+          700: '#ffe686',
+          800: '#ffcd6d',
+          900: '#ffb353',
+        },
+        yellow: {
+          600: '#ffffbe',
+          700: '#ffffa4',
+          800: '#ffff8b',
+          900: '#f9f871',
+        },
         black: '#000000',
         white: '#ffffff'
       },
       fontFamily: {
-        mono: ['SFMono-Regular', 'ui-monospace'/*, 'SFMono-Regular'*/],
-        sans: ['Graphik', 'sans-serif'],
-        serif: ['Merriweather', 'serif'],
+        mono: ['Roboto Mono', ...defaultTheme.fontFamily.mono],
       },
     },
   },
