@@ -85,6 +85,19 @@ module.exports = {
       fontFamily: {
         mono: ['Roboto Mono', ...defaultTheme.fontFamily.mono],
       },
+      animation: {
+        fadeIn1: "fadeIn 1s ease-in forwards",
+        fadeIn2: "fadeIn 2s ease-in forwards"
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 }
+        }
+      },
+      variants: {
+        animation: ["motion-safe"]
+    }
     },
   },
   plugins: [],

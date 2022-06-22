@@ -13,7 +13,7 @@
   <body class="bg-grey-100 font-mono text-blue-900">
 
     <!--Navbar-->
-    <nav class="flex-wrap relative py-6 bg-grey-200">
+    <nav class="sticky top-0 z-50 flex flex-wrap py-6 backdrop-opacity-10 backdrop-invert bg-grey-400/90 drop-shadow-xl">
       <div class="flex items-center justify-between container mx-auto">
           <div class="px-5">
             <img class="w-8 h-auto rounded-lg mx-auto" src="ziad.png" alt="img_of_ziad_azzabi">
@@ -58,7 +58,7 @@
       <!--flex auto height & width div-->
       <div class="my-auto mx-auto">
 
-        <div class="m-auto sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-4xl xs:px-8 sm:px-8 px-14 my-48 border border-black">
+        <div class="js-show-on-scroll mx-auto sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-4xl xs:px-8 sm:px-8 px-14 my-48 border border-black">
           <div class="py-20 m-auto">
             <p>Hi, my name is</p>
             <h1 class="text-4xl font-semibold py-4">
@@ -73,7 +73,7 @@
           </div>
         </div>
 
-        <div class="m-auto xs:max-w-md sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-4xl xs:px-8 sm:px-8 px-14 my-48 border border-black">
+        <div class="js-show-on-scroll mx-auto xs:max-w-md sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-4xl xs:px-8 sm:px-8 px-14 my-48 border border-black">
           <div class="py-20 m-auto">
             <h1 class="text-4xl font-semibold py-4">
               <sup class="text-blue-400">01.</sup>About
@@ -136,7 +136,7 @@
         </div>
         
         
-        <div class="m-auto xs:max-w-md sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-4xl xs:px-8 sm:px-8 px-14 my-48 border border-black">
+        <div class="js-show-on-scroll mx-auto xs:max-w-md sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-4xl xs:px-8 sm:px-8 px-14 my-48 border border-black">
           <div class="py-20 m-auto">
 
             <h1 class="text-4xl font-semibold py-4">
@@ -198,13 +198,33 @@
 
 
 <script>
+  /*Adding mobile button show/hide depending on screen size*/
   const btn = document.querySelector("button.mobile-menu-button");
   const menu = document.querySelector(".mobile-menu");
-
   // Add Event Listeners
   btn.addEventListener("click", () => {
     menu.classList.toggle("hidden");
   });
+
+
+  /*Adding navbar to show on scroll up*/
+  const callback = function (entries) {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate-fadeIn1");
+    } else {
+      entry.target.classList.remove("animate-fadeIn1");
+    }
+  });
+};
+const observer = new IntersectionObserver(callback);
+const targets = document.querySelectorAll(".js-show-on-scroll");
+targets.forEach(function (target) {
+  target.classList.add("opacity-0");
+  observer.observe(target);
+});
+
 </script>
 
 </html>
