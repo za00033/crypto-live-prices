@@ -9,6 +9,7 @@ module.exports = {
   ],
   theme: {
     screens:{// Here we can specify the screen sizes
+      'xs': '320px',
       'sm': '480px',
       'md': '768px',
       'lg': '1024px',
