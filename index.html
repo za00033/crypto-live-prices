@@ -7,11 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <title>Portofolio Website</title>
   </head>
-  <body class="font-mono text-blue-900 bg-gray-500" style="transition: background-color 1s ease;">
+  <body class="font-mono text-blue-900 bg-slate-300" style="transition: background-color 1s ease;">
+    <div class="hidden bg-red-300 bg-blue-300 bg-green-300"></div>
 
     <!--Navbar-->
     <nav class="sticky top-0 z-50 flex flex-wrap py-6 backdrop-opacity-10 backdrop-invert bg-grey-400/90 drop-shadow-xl">
@@ -60,7 +61,7 @@
       <div class="my-auto mx-auto">
 
         <div class="panel justify-around items-center flex min-h-screen js-show-on-scroll mx-auto 
-        sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-4xl xs:px-8 sm:px-8 px-14 border border-black" data-color="red-400">
+        sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-4xl xs:px-8 sm:px-8 px-14 border border-black" data-color="green-300">
           <div class="my-auto mx-auto py-20">
             <p>Hi, my name is</p>
             <h1 class="text-4xl font-semibold py-4">
@@ -76,7 +77,7 @@
         </div>
 
         <div class="panel justify-around items-center flex min-h-screen js-show-on-scroll 
-        mx-auto xs:max-w-md sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-4xl xs:px-8 sm:px-8 px-14 my-48 border border-black" data-color="green-400">
+        mx-auto xs:max-w-md sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-4xl xs:px-8 sm:px-8 px-14 my-48 border border-black" data-color="red-300">
           <div class="py-20 m-auto">
             <h1 class="text-4xl font-semibold py-4">
               <sup class="text-blue-400">01.</sup>About
@@ -140,7 +141,7 @@
         
         
         <div class="panel justify-around items-center flex min-h-screen js-show-on-scroll 
-        mx-auto xs:max-w-md sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-4xl xs:px-8 sm:px-8 px-14 my-48 border border-black" data-color="blue-400">
+        mx-auto xs:max-w-md sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-4xl xs:px-8 sm:px-8 px-14 my-48 border border-black" data-color="blue-300">
           <div class="py-20 mx-auto my-auto">
 
             <h1 class="text-4xl font-semibold py-4">
@@ -168,7 +169,7 @@
 
 
 
-    <div class="panel flex h-screen" data-color="blue-100">
+    <div class="flex h-screen">
       <!--flex auto height & width div-->
       <div class="my-auto mx-auto">
         <!--website is under work div-->
@@ -268,7 +269,6 @@ $(window).scroll(function() {
        
       // Add class of currently active div
       $body.addClass('bg-' + $(this).data('color'));
-      console.log($body);
     }
   });    
   
