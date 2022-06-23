@@ -4,8 +4,9 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   content: [
-    './comp/**/*.{html,js}',
-    './index.html',
+    './pages/**/*.{html,js}',
+    './components/**/*.{html,js}',
+    './index.html'
   ],
   theme: {
     screens:{// Here we can specify the screen sizes
