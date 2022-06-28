@@ -1,3 +1,11 @@
+/*
+----------------
+After editing and run the express node server with html files, steps are:
+1- npm run build (ensures that the new changed in html files are compiled with tailwind)
+2- node index.js (runs the express server)
+*/
+
+
 const express = require('express');
 
 const app = express();
@@ -27,9 +35,6 @@ app.get('/', (req, res) => {
 })
 
 
-
-
 const server = app.listen(3000, () => {
-    console.log(`The application started on port ${server.address().port}`);
-    console.log(__dirname);
+    console.log(`Express server application started on port ${server.address().port}`);
 });

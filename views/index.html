@@ -1,13 +1,207 @@
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-        <title>Node.js with TailwindCSS, Express and Pug</title><link href="main.css" rel="stylesheet">
-        <style type="text/css">@font-face { font-family: Roboto; src: url("chrome-extension://mcgbeeipkmelnpldkobichboakdfaeon/css/Roboto-Regular.ttf"); }</style>
-    </head>
-    <body class="">
-        <h1 class="border border-black">Hello world!</h1>
-        <p>My starter template</p>
-    </body>
-    </html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>Portofolio Website</title>
+  </head>
+  <body class="font-mono text-blue-900 bg-slate-300" style="transition: background-color 1s ease;">
+    <!--Below is a hidden div for tailwind to add these colors when compailing since Tailwind does not add classes if they are not used in the code-->
+    <div class="hidden bg-red-100 bg-blue-100 bg-green-100 bg-red-300 bg-blue-300 bg-green-300"></div>
+
+    <!--Navbar-->
+    <nav class="sticky top-0 z-50 flex flex-wrap py-6 backdrop-opacity-10 backdrop-invert bg-grey-400/90 drop-shadow-xl">
+      <div class="flex items-center justify-between container mx-auto">
+          <div class="px-5">
+            <img class="w-8 h-auto rounded-lg mx-auto" src="img/ziad.png" alt="img_of_ziad_azzabi">
+          </div>
+          <div class="space-x-6 text-sm hidden md:flex px-5">
+            <a class="text-md my-auto text-blue-900 hover:text-blue-400 transition duration-300" href="#about"><sup class="text-blue-400">01.</sup>About</a>
+            <a class="text-md my-auto text-blue-900 hover:text-blue-400 transition duration-300" href="#exp"><sup class="text-blue-400">02.</sup>Exp</a>
+            <a class="text-md my-auto text-blue-900 hover:text-blue-400 transition duration-300" href="#work"><sup class="text-blue-400">03.</sup>Fun/Work</a>
+            <a class="text-md my-auto text-blue-900 hover:text-blue-400 transition duration-300" href="#contact"><sup class="text-blue-400">04.</sup>Contact</a>
+            <button class="text-sm text-blue-900 border border-blue-900 hover:bg-blue-400 transition duration-300 rounded-full py-2 px-5">Resume | CV</button>
+          </div>
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button class="outline-none mobile-menu-button">
+              <svg
+                class="w-6 h-6 text-blue-900"
+                x-show="!showMenu"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+      </div>
+    </div>
+      <!-- Mobile menu -->
+      <div class="hidden mobile-menu py-5 container mx-auto">
+        <ul class="">
+          <li><a href="#about" class="mx-auto block text-sm px-2 py-4 text-blue-900 hover:text-blue-400"><sup class="text-blue-400">01.</sup>About</a><hr></li>
+          <li><a href="#exp" class="block text-sm px-2 py-4 text-blue-900 hover:text-blue-400 transition duration-300"><sup class="text-blue-400">02.</sup>Experience</a><hr></li>
+          <li><a href="#work" class="block text-sm px-2 py-4 text-blue-900 hover:text-blue-400 transition duration-300"><sup class="text-blue-400">03.</sup>Fun/Work</a><hr></li>
+          <li><a href="#contact" class="block text-sm px-2 py-4 text-blue-900 hover:text-blue-400 transition duration-300"><sup class="text-blue-400">04.</sup>Contact</a><hr></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="flex container mx-auto">
+      <!--flex auto height & width div-->
+      <div class="my-auto mx-auto">
+
+        <div class="panel justify-around items-center flex min-h-screen js-show-on-scroll mx-auto 
+        sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-4xl xs:px-8 sm:px-8 px-14" data-color="green-100">
+          <div class="my-auto mx-auto py-20">
+            <p>Hi, my name is</p>
+            <h1 class="text-4xl font-semibold py-4">
+              Ziad Azzabi
+            </h1>
+            <h1 class="text-xl">
+              I build things that serve a purpose
+            </h1>
+            <div class="pt-5">
+              <button class="text-sm text-blue-900 border border-blue-900 hover:bg-blue-400 transition duration-300 rounded-full py-2 px-5">Check out my projects</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="about" class="panel justify-around items-center flex min-h-screen js-show-on-scroll 
+        mx-auto xs:max-w-md sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-4xl xs:px-8 sm:px-8 px-14 my-48" data-color="red-100">
+          <div class="py-20 m-auto">
+            <h1 class="text-4xl font-semibold py-4">
+              <sup class="text-blue-400">01.</sup>About
+              <hr class="ml-44">
+            </h1>
+            <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
+              <!--1st Column with occupying 2 columns using col-span-2 class-->
+              <div class="md:col-span-2">
+                <p class="text-base">
+                Humble special asset in any team, considered to be fast learner, dedicated, loyal & innovative, ready to put his skills/mindset in the job.
+                </p>
+                <p class="text-base py-4">
+                  Passion is the main resource for success, I utilise it fully to benefit thew work place & myself.
+                </p>
+                <!--Skills-->
+                <div class="grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-0 py-4 pl-4">
+                  <!--1st col of skills-->
+                  <div class="">
+                    <ul class="list-disc">
+                      <li>C</li>
+                      <li>C#</li>
+                      <li>JQ</li>
+                      <li>JS [ES6]</li>
+                    </ul>
+                  </div>
+                  <!--2nd col of skills-->
+                  <div class="">
+                    <ul class="list-disc">
+                      <li>GO</li>
+                      <li>CSS</li>
+                      <li>GIT</li>
+                      <li>SQL</li>
+                    </ul>
+                  </div>
+                  <!--3rd col of skills-->
+                  <div class="">
+                    <ul class="list-disc">
+                      <li>C++</li>
+                      <li>Rust</li>
+                      <li>HTML</li>
+                      <li>Ruby</li>
+                    </ul>
+                  </div>
+                  <!--4th col of skills-->
+                  <div class="">
+                    <ul class="list-disc">
+                      <li>Web3</li>
+                      <li>Matlab</li>
+                      <li>Python</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--2nd Column-->
+              <div class="mx-auto">          
+                <img class="w-48 h-auto rounded-lg mx-auto" src="img/ziad.png" alt="img_of_ziad_azzabi">
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div id="exp" class="panel justify-around items-center flex min-h-screen js-show-on-scroll 
+        mx-auto xs:max-w-md sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-4xl xs:px-8 sm:px-8 px-14 my-48" data-color="blue-100">
+          <div class="py-20 mx-auto my-auto">
+
+            <h1 class="text-4xl font-semibold py-4">
+              <sup class="text-blue-400">02.</sup>Experience
+              <hr class="ml-72">
+            </h1>
+
+            <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
+              <!--1st Column with occupying 2 columns using col-span-2 class-->
+              <div class="md:col-span-2">
+                
+              </div>
+              <!--2nd Column-->
+              <div class="mx-auto">  
+                <!--Company Logo-->        
+                <img class="w-48 h-auto rounded-lg mx-auto" src="" alt="img_of_company_logo">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div class="flex h-screen">
+      <!--flex auto height & width div-->
+      <div class="my-auto mx-auto">
+        <!--website is under work div-->
+        <div class="py-1 w-64">
+          <h1 class="text-center text-xl font-semibold">
+            Ziad Azzabi
+          </h1>
+          <h2 class="text-center text-base w-64">
+            Website is under work...
+          </h2>
+        </div>
+        <!--Profile Image div-->
+        <div class="py-2 ">
+          <img class="w-48 h-auto rounded-lg mx-auto" src="img/ziad.png" alt="">
+        </div>
+        <!--Download CV button-->
+        <div class="w-48 py-2 mx-auto">
+          <a class= "self-auto mx-auto" href="pdf/Ziad_Azzabi_CV.pdf" target="_blank">
+            <button class="w-full text-sm text-blue-900 border border-blue-900 hover:bg-blue-400 rounded-full py-2 px-5">View CV</button>
+          </a>
+          <div class="w-48 py-2 mx-auto">
+            <a class= "self-auto mx-auto" href="pdf/Ziad_Azzabi_CV.pdf" download>
+              <button class="w-full text-sm text-blue-900 border border-blue-900 hover:bg-blue-400 rounded-full py-2 px-5">Download CV</button>
+            </a>
+        </div>
+      </div>
+      </div>
+    </div>
+
+  </body>
+  
+  <script src="main.js"></script>
+
+</html>
