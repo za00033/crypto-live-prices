@@ -8,12 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
     <link rel="stylesheet" href="main.css">
     <title>Portofolio Website</title>
   </head>
   <body class="font-mono text-blue-900 bg-slate-300" style="transition: background-color 1s ease;">
     <!--Below is a hidden div for tailwind to add these colors when compailing since Tailwind does not add classes if they are not used in the code-->
-    <div class="hidden bg-red-100 bg-blue-100 bg-green-100 bg-red-300 bg-blue-300 bg-green-300"></div>
+    <div class="hidden bg-slate-100 bg-red-100 bg-blue-100 bg-green-100 bg-red-300 bg-blue-300 bg-green-300"></div>
 
     <!--Navbar-->
     <nav class="sticky top-0 z-50 flex flex-wrap py-6 backdrop-opacity-10 backdrop-invert bg-grey-400/90 drop-shadow-xl">
@@ -78,7 +79,7 @@
         </div>
 
         <div id="about" class="panel justify-around items-center flex min-h-screen js-show-on-scroll 
-        mx-auto xs:max-w-md sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-4xl xs:px-8 sm:px-8 px-14 my-48" data-color="red-100">
+        mx-auto xs:max-w-md sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-4xl xs:px-8 sm:px-8 px-14 my-48" data-color="slate-100">
           <div class="py-20 m-auto">
             <h1 class="text-4xl font-semibold py-4">
               <sup class="text-blue-400">01.</sup>About
@@ -94,6 +95,20 @@
                   Passion is the main resource for success, I utilise it fully to benefit thew work place & myself.
                 </p>
                 <!--Skills-->
+                <div class="flex mb-1">
+                    <span class="text-base text-blue-700">OOP</span>
+                    <span data-tooltip-target="tooltip-default" class="text-base text-blue-700 font-xs rounded-full">i</span>
+                    <div id="tooltip-default" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-500 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip" style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(501px, -188px);" data-popper-placement="top">
+                        Object Oriented Programming
+                        <div class="tooltip-arrow" data-popper-arrow="" style="position: absolute; left: 0px; transform: translate(59px, 0px);"></div>
+                    </div>
+                    <span class="text-sm text-blue-700 object-none object-right">45%</span>
+                </div>
+
+
+                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 45%"></div>
+                </div>
                 <div class="grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-0 py-4 pl-4">
                   <!--1st col of skills-->
                   <div class="">
@@ -134,7 +149,7 @@
               </div>
               <!--2nd Column-->
               <div class="mx-auto">          
-                <img class="w-48 h-auto rounded-lg mx-auto" src="img/ziad.png" alt="img_of_ziad_azzabi">
+                <!--<img class="w-48 h-auto rounded-lg mx-auto" src="img/ziad.png" alt="img_of_ziad_azzabi">-->
               </div>
             </div>
           </div>
@@ -154,6 +169,7 @@
               <!--1st Column with occupying 2 columns using col-span-2 class-->
               <div class="md:col-span-2">
                 
+
               </div>
               <!--2nd Column-->
               <div class="mx-auto">  
@@ -202,6 +218,9 @@
 
   </body>
   
+  <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
   <script src="main.js"></script>
+  <script src="/node_modules/flowbite/dist/flowbite.js"></script>
+
 
 </html>
