@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,19 +13,19 @@
   </head>
   <body class="font-mono text-blue-900 bg-slate-300" style="transition: background-color 1s ease;">
     <!--Below is a hidden div for tailwind to add these colors when compailing since Tailwind does not add classes if they are not used in the code-->
-    <div class="hidden bg-red-300 bg-blue-300 bg-green-300"></div>
+    <div class="hidden bg-slate-100 bg-red-100 bg-blue-100 bg-green-100 bg-red-300 bg-blue-300 bg-green-300"></div>
 
     <!--Navbar-->
     <nav class="sticky top-0 z-50 flex flex-wrap py-6 backdrop-opacity-10 backdrop-invert bg-grey-400/90 drop-shadow-xl">
       <div class="flex items-center justify-between container mx-auto">
           <div class="px-5">
-            <img class="w-8 h-auto rounded-lg mx-auto" src="ziad.png" alt="img_of_ziad_azzabi">
+            <img class="w-8 h-auto rounded-lg mx-auto" src="img/ziad.png" alt="img_of_ziad_azzabi">
           </div>
           <div class="space-x-6 text-sm hidden md:flex px-5">
-            <a class="text-md my-auto text-blue-900 hover:text-blue-400 transition duration-300" href="/#"><sup class="text-blue-400">01.</sup>About</a>
-            <a class="text-md my-auto text-blue-900 hover:text-blue-400 transition duration-300" href="/#"><sup class="text-blue-400">02.</sup>Exp</a>
-            <a class="text-md my-auto text-blue-900 hover:text-blue-400 transition duration-300" href="/#"><sup class="text-blue-400">03.</sup>Fun/Work</a>
-            <a class="text-md my-auto text-blue-900 hover:text-blue-400 transition duration-300" href="/#"><sup class="text-blue-400">04.</sup>Contact</a>
+            <a class="text-md my-auto text-blue-900 hover:text-blue-400 transition duration-300" href="#about"><sup class="text-blue-400">01.</sup>About</a>
+            <a class="text-md my-auto text-blue-900 hover:text-blue-400 transition duration-300" href="#exp"><sup class="text-blue-400">02.</sup>Knowledge</a>
+            <a class="text-md my-auto text-blue-900 hover:text-blue-400 transition duration-300" href="#work"><sup class="text-blue-400">03.</sup>Fun/Work</a>
+            <a class="text-md my-auto text-blue-900 hover:text-blue-400 transition duration-300" href="mailto:ziad@azzabi.co.uk"><sup class="text-blue-400">04.</sup>Contact</a>
             <button class="text-sm text-blue-900 border border-blue-900 hover:bg-blue-400 transition duration-300 rounded-full py-2 px-5">Resume | CV</button>
           </div>
           <!-- Mobile menu button -->
@@ -44,15 +44,15 @@
               <path d="M4 6h16M4 12h16M4 18h16"></path>
               </svg>
             </button>
+          </div>
       </div>
-    </div>
       <!-- Mobile menu -->
       <div class="hidden mobile-menu py-5 container mx-auto">
         <ul class="">
-          <li class="active"><a href="index.html" class="mx-auto block text-sm px-2 py-4 text-blue-900 hover:text-blue-400"><sup class="text-blue-400">01.</sup>About</a><hr></li>
-          <li><a href="#services" class="block text-sm px-2 py-4 text-blue-900 hover:text-blue-400 transition duration-300"><sup class="text-blue-400">02.</sup>Experience</a><hr></li>
-          <li><a href="#about" class="block text-sm px-2 py-4 text-blue-900 hover:text-blue-400 transition duration-300"><sup class="text-blue-400">03.</sup>Fun/Work</a><hr></li>
-          <li><a href="#contact" class="block text-sm px-2 py-4 text-blue-900 hover:text-blue-400 transition duration-300"><sup class="text-blue-400">04.</sup>Contact</a><hr></li>
+          <li><a href="#about" class="mx-auto block text-sm px-2 py-4 text-blue-900 hover:text-blue-400"><sup class="text-blue-400">01.</sup>About</a><hr></li>
+          <li><a href="#exp" class="block text-sm px-2 py-4 text-blue-900 hover:text-blue-400 transition duration-300"><sup class="text-blue-400">02.</sup>Knowledge</a><hr></li>
+          <li><a href="#work" class="block text-sm px-2 py-4 text-blue-900 hover:text-blue-400 transition duration-300"><sup class="text-blue-400">03.</sup>Fun/Work</a><hr></li>
+          <li><a href="mailto:ziad@azzabi.co.uk" class="block text-sm px-2 py-4 text-blue-900 hover:text-blue-400 transition duration-300"><sup class="text-blue-400">04.</sup>Contact</a><hr></li>
         </ul>
       </div>
     </nav>
@@ -60,12 +60,11 @@
     <div class="flex container mx-auto">
       <!--flex auto height & width div-->
       <div class="my-auto mx-auto">
-
         <div class="panel justify-around items-center flex min-h-screen js-show-on-scroll mx-auto 
-        sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-4xl xs:px-8 sm:px-8 px-14 border border-black" data-color="green-300">
-          <div class="my-auto mx-auto py-20">
-            <p>Hi, my name is</p>
-            <h1 class="text-4xl font-semibold py-4">
+        sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-4xl xs:px-8 px-14" data-color="green-100">
+        <div class="py-20 mx-auto my-auto relative px-4 bg-white shadow-lg sm:rounded-3xl sm:p-20 bg-clip-padding bg-opacity-25 border border-gray-200" style="backdrop-filter: blur(20px);">
+          <p class="text-lg">Hi, my name is</p>
+            <h1 class="text-5xl font-semibold py-4">
               Ziad Azzabi
             </h1>
             <h1 class="text-xl">
@@ -76,14 +75,17 @@
             </div>
           </div>
         </div>
-
-        <div class="panel justify-around items-center flex min-h-screen js-show-on-scroll 
-        mx-auto xs:max-w-md sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-4xl xs:px-8 sm:px-8 px-14 my-48 border border-black" data-color="red-300">
-          <div class="py-20 m-auto">
-            <h1 class="text-4xl font-semibold py-4">
+        <div id="about" class="panel justify-around items-center min-h-screen js-show-on-scroll 
+        mx-auto xs:max-w-md sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-4xl xs:px-8 sm:px-8 px-14 my-48" data-color="slate-100">
+        <div class="py-20 mx-auto my-auto relative px-4 bg-white shadow-lg sm:rounded-3xl sm:p-20 bg-clip-padding bg-opacity-25 border border-gray-200" style="backdrop-filter: blur(20px);">
+          <div class="pt-4 pb-10">
+            <h1 class="expl1_h1 text-4xl font-semibold">
               <sup class="text-blue-400">01.</sup>About
-              <hr class="ml-44">
+              <hr class="ml-72">
             </h1>
+            <p class="expl1 hidden text-sm pt-5">About<sup class="text-blue-400">noun</sup> [on the subject of, or connected with]</p>
+          </div>
+          
             <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
               <!--1st Column with occupying 2 columns using col-span-2 class-->
               <div class="md:col-span-2">
@@ -93,189 +95,176 @@
                 <p class="text-base py-4">
                   Passion is the main resource for success, I utilise it fully to benefit thew work place & myself.
                 </p>
-                <!--Skills-->
-                <div class="grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-0 py-4 pl-4">
-                  <!--1st col of skills-->
-                  <div class="">
-                    <ul class="list-disc">
-                      <li>C</li>
-                      <li>C#</li>
-                      <li>JQ</li>
-                      <li>JS [ES6]</li>
-                    </ul>
-                  </div>
-                  <!--2nd col of skills-->
-                  <div class="">
-                    <ul class="list-disc">
-                      <li>GO</li>
-                      <li>CSS</li>
-                      <li>GIT</li>
-                      <li>SQL</li>
-                    </ul>
-                  </div>
-                  <!--3rd col of skills-->
-                  <div class="">
-                    <ul class="list-disc">
-                      <li>C++</li>
-                      <li>Rust</li>
-                      <li>HTML</li>
-                      <li>Ruby</li>
-                    </ul>
-                  </div>
-                  <!--4th col of skills-->
-                  <div class="">
-                    <ul class="list-disc">
-                      <li>Web3</li>
-                      <li>Matlab</li>
-                      <li>Python</li>
-                    </ul>
-                  </div>
+
+                <div class="flex flex-row">
+                  <a class= "w-48 mx-auto" href="pdf/Ziad_Azzabi_CV.pdf" target="_blank">
+                    <button class="w-full text-sm text-blue-900 border border-blue-900 hover:bg-blue-400 rounded-full py-2 px-5">View CV</button>
+                  </a>
+                  <a class= "w-48 mx-auto" href="pdf/Ziad_Azzabi_CV.pdf" download>
+                    <button class="w-full text-sm text-blue-900 border border-blue-900 hover:bg-blue-400 rounded-full py-2 px-5">Download CV</button>
+                  </a>
                 </div>
+
               </div>
               <!--2nd Column-->
               <div class="mx-auto">          
-                <img class="w-48 h-auto rounded-lg mx-auto" src="ziad.png" alt="img_of_ziad_azzabi">
+                <img class="w-48 h-auto rounded-lg mx-auto" src="img/ziad.png" alt="img_of_ziad_azzabi">
               </div>
             </div>
           </div>
         </div>
-        
-        
-        <div class="panel justify-around items-center flex min-h-screen js-show-on-scroll 
-        mx-auto xs:max-w-md sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-4xl xs:px-8 sm:px-8 px-14 my-48 border border-black" data-color="blue-300">
-          <div class="py-20 mx-auto my-auto">
-
-            <h1 class="text-4xl font-semibold py-4">
-              <sup class="text-blue-400">02.</sup>Experience
-              <hr class="ml-72">
-            </h1>
-
-            <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
-              <!--1st Column with occupying 2 columns using col-span-2 class-->
-              <div class="md:col-span-2">
-                
-              </div>
-              <!--2nd Column-->
-              <div class="mx-auto">  
-                <!--Company Logo-->        
-                <img class="w-48 h-auto rounded-lg mx-auto" src="ziad.png" alt="img_of_ziad_azzabi">
-              </div>
+        <div id="exp" class="panel justify-around items-center min-h-screen js-show-on-scroll 
+        mx-auto xs:max-w-md md:max-w-2xl xl:max-w-4xl xs:px-8 px-14 my-48" data-color="blue-100">
+          <div class="py-20 mx-auto my-auto relative px-4 bg-white shadow-lg sm:rounded-3xl sm:p-20 bg-clip-padding bg-opacity-25 border border-gray-200" style="backdrop-filter: blur(20px);">
+            <div class="pt-4 pb-10">
+              <h1 class="expl2_h1 text-4xl font-semibold">
+                <sup class="text-blue-400">02.</sup>Knowledge
+                <hr class="ml-72">
+              </h1>
+              <p class="expl2 hidden text-sm pt-5">Knowledge<sup class="text-blue-400">noun</sup> [understanding of or information about a subject that you get by experience or study]</p>
             </div>
+            <div class="mx-auto">
 
+              <h3 class="pl-2 pb-2 text-xl font-semibold text-end">Work Experience</h3>  
+              <details class=" open:bg-blue-400 duration-300 rounded-t-lg border-t border-x border-blue-400 hover:bg-blue-400">
+                  <summary class="relative bg-inherit px-5 py-3 text-2xl cursor-pointer h-28">
+                    Sollatek
+                    <img class="w-20 h-auto absolute inset-y-0 right-0 my-4 mx-4" src="img/Sollatek_logo.png" alt="Sollatek_logo">
+                  </summary>
+                <div class="bg-slate-100 px-5 py-3 border border-gray-300 text-sm font-light">
+                  <div class="pb-2">
+                    <h3 class="text-lg">Electronics Design Engineer <span class="text-md inline">[2015 - Preset]</span></h3>
+                  </div>
+                  <li class="pb-2">Responsible for hardware design of a Port Expander for Sollateks’ energy management devices which features GSM, BLE & WiFi connectivity (plugins).</li>
+                  <li class="pb-2">Heavily involved in technical communication with stakeholders and clients for future proofing their needs.</li>
+                  <li class="pb-2">Designed and maintained hardware and firmware of multiple displays that connect to Sollateks’ cooler controllers.</li>
+                  <li class="pb-2">Involved in developing capacitive touch switches for one of Sollateks’ cooler controllers.</li>
+                  <li class="pb-2">Fully designed and deployed various automated PC based test procedures for Sollatek products to facilitate production.</li>
+                </div>
+                <div class="bg-slate-100 px-5 py-3 border border-gray-300 text-sm font-light">
+                  <div class="pb-2">
+                    <h3 class="text-lg">Graduate Electronics Design Engineer <span class="text-md inline">[2015 - 2016]</span></h3>
+                  </div>
+                  <li class="pb-2">Fully designed the hardware and firmware of a Programming Dongle that is used to reflash ST microcontrollers (including C# GUI).</li>
+                  <li class="pb-2">Identified and investigated Problems and known Errors, including preventing the replication of problems found.</li>
+                  <li class="pb-2">Designed Graphical User Interface using C# for a developed product.</li>
+                </div>
+                <div class="bg-slate-100 px-5 py-3 border border-gray-300 text-sm font-light">
+                  <div class="pb-2">
+                    <h3 class="text-lg">Electronics Design Internship <span class="text-md inline">[Summer 2014]</span></h3>
+                  </div>
+                  <li class="pb-2">Responsible for finding the root cause of issues present in returned products, providing full analysis reports on findings from various tests to narrow down and prove the root cause. Including providing a suitable solution to the issue.</li>
+                  <li class="pb-2">Heavily involved in creating and issuing firmware for a GSM modem, with exposure to mobile & internet protocols.</li>
+                  <li class="pb-2">Designed Graphical User Interface using C# for a developed product.</li>
+                </div>
+              </details>
+
+              <details class=" open:bg-blue-400 duration-300 border-t border-x border-blue-400 hover:bg-blue-400">
+                <summary class="relative bg-inherit px-5 py-3 text-2xl cursor-pointer h-28 align-middle">
+                  MasterFlip
+                  <img class="w-24 h-auto absolute top-0 right-0 my-6 mx-4" src="img/MF_logo.png" alt="MasterFlip_logo">
+                </summary>
+              <div class="bg-slate-100 px-5 py-3 border border-gray-300 text-sm font-light">
+                <div class="pb-2">
+                  <h3 class="text-lg">Paint Specialist & Co-Founder<span class="text-md inline">[2017 - 2019]</span></h3>
+                </div>
+                <li>Co-founded a fashion brand that manufactures handmade Apparel products.</li>
+                <li>Developed durable special effects paint that changes colour depending on an affect (Hydro, Heat & UV light).</li>
+                <li>Developed and maintained an e-commerce website for the business.</li>
+                <li>Sold after maturity.</li>
+              </div>
+              </details>
+              <details class=" open:bg-blue-400 duration-300 border border-blue-400 hover:bg-blue-400">
+                <summary class="relative bg-inherit px-5 py-3 text-2xl cursor-pointer h-28">
+                  Almenuo
+                  <img class="w-20 h-auto absolute inset-y-0 right-0 my-4 mx-4" src="img/Almenuo_logo1.png" alt="Almenuo_logo">
+                </summary>
+              <div class="bg-slate-100 px-5 py-3 border border-gray-300 text-sm font-light">
+                <div class="pb-2">
+                  <h3 class="text-lg">Technology Strategist & Co-Founder<span class="text-md inline">[2016 - 2017]</span></h3>
+                </div>
+                <li>Co-founded a subscription, booking & points based business for restaurants/cafes in Tripoli, Libya.</li>
+                <li>Fully responsible of the technology side of the business from developing a phone application for users and platform for business owners.</li>
+                <li>Utilised NFC technology for users to attend bookings and collect points to redeem in restaurants/cafes.</li>
+                <li>Sold after maturity.</li>
+              </div>
+              </details>
+              <h3 class="pl-2 pb-2 pt-8 text-xl font-semibold text-end">Education</h3>  
+              <details class="open:bg-blue-400 duration-300 rounded-t-lg border-t border-x border-blue-400 hover:bg-blue-400">
+                <summary class="relative bg-inherit px-5 py-3 text-2xl cursor-pointer h-28 align-middle">
+                  Masters of Science (MSc)
+                  <img class="w-32 h-auto absolute top-0 right-0 my-8 mx-4" src="img/UoS_logo.png" alt="University_of_Surrey_logo">
+                </summary>
+                <div class="bg-slate-100 px-5 py-3 border border-gray-300 text-sm font-light">
+                  <div class="pb-2">
+                    <h3 class="text-lg">MSc Management Information Systems <span class="text-md inline">[2014 - 2015]</span></h3>
+                  </div>
+                  <li class="pb-2">Agile Web Development.</li>
+                  <li class="pb-2">Challenges for Computing Professionals.</li>
+                  <li class="pb-2">Databases and Knowledge Discovery.</li>
+                  <li class="pb-2">Information Systems Development.</li>
+                  <li class="pb-2">Intelligent Information Systems.</li>
+                  <li class="pb-2">Project Management and Business Strategy.</li>
+                  <li class="pb-2">Information Security Management.</li>
+                  <li class="pb-2">HTML5 and CSS3 for Mobile Applications.</li>
+                  <li class="pb-2">Cloud Computing.</li>
+                  <li class="pb-2">Information Security for Business and Government.</li>
+                  <li class="pb-2">Enterprise System Development.</li>
+                  <li class="pb-2">Final Year Project.</li>
+                </div>
+
+              </details>
+              <details class="open:bg-blue-400 duration-300 border border-blue-400 hover:bg-blue-400">
+                <summary class="relative bg-inherit px-5 py-3 text-2xl cursor-pointer h-28 align-middle">
+                  Bachelor in Engineering (BEng)
+                  <img class="w-32 h-auto absolute top-0 right-0 my-8 mx-4" src="img/UoS_logo.png" alt="University_of_Surrey_logo">
+                </summary>
+                <div class="bg-slate-100 px-5 py-3 border border-gray-300 text-sm font-light">
+                  <div class="pb-2">
+                    <h3 class="text-lg">BEng Electronics Engineering <span class="text-md inline">[2012 - 2014]</span></h3>
+                  </div>
+                  <li class="pb-2">Analogue Electronics.</li>
+                  <li class="pb-2">Computers and programming in the C language.</li>
+                  <li class="pb-2">Digital Logic and Digital Electronics.</li>
+                  <li class="pb-2">Electronic Circuits Theory and Analysis.</li>
+                  <li class="pb-2">Engineering Mathematics.</li>
+                  <li class="pb-2">Engineering Science.</li>
+                  <li class="pb-2">Laboratories, Design and Professional Studies.</li>
+                  <li class="pb-2">Data and Internet Networking.</li>
+                  <li class="pb-2">Digital Communications.</li>
+                  <li class="pb-2">Digital Signal Processing.</li>
+                  <li class="pb-2">Optoelectronics.</li>
+                  <li class="pb-2">RF and Microwave Fundamentals.</li>
+                  <li class="pb-2">Silicon Devices and Technology.</li>
+                  <li class="pb-2">& Many more.</li>
+                </div>
+
+              </details>
+            </div>
           </div>
         </div>
-
       </div>
     </div>
-
-
-
-    <div class="flex h-screen">
-      <!--flex auto height & width div-->
-      <div class="my-auto mx-auto">
-        <!--website is under work div-->
-        <div class="py-1 w-64">
-          <h1 class="text-center text-xl font-semibold">
-            Ziad Azzabi
-          </h1>
-          <h2 class="text-center text-base w-64">
-            Website is under work...
-          </h2>
-        </div>
-        <!--Profile Image div-->
-        <div class="py-2 ">
-          <img class="w-48 h-auto rounded-lg mx-auto" src="ziad.png" alt="">
-        </div>
-        <!--Download CV button-->
-        <div class="w-48 py-2 mx-auto">
-          <a class= "self-auto mx-auto" href="Ziad_Azzabi_CV.pdf" target="_blank">
-            <button class="w-full text-sm text-blue-900 border border-blue-900 hover:bg-blue-400 rounded-full py-2 px-5">View CV</button>
-          </a>
-          <div class="w-48 py-2 mx-auto">
-            <a class= "self-auto mx-auto" href="Ziad_Azzabi_CV.pdf" download>
-              <button class="w-full text-sm text-blue-900 border border-blue-900 hover:bg-blue-400 rounded-full py-2 px-5">Download CV</button>
-            </a>
+    <!--Footer-->
+    <footer class="backdrop-opacity-10 backdrop-invert bg-grey-400/90 drop-shadow-[0_0px_100px_rgba(0,0,0,0.25)] pt-28 pb-10">
+      <div class="flex items-center justify-between container mx-auto">
+        <div class="flex flex-row mx-auto space-x-6">
+          <a class="hover:bg-blue-400 duration-500 rounded-lg" href="https://www.instagram.com/ziad_azzabi/"><img class="w-12 h-auto" src="img/ig.png" alt="Instagram_Icon"></a>
+          <a class="hover:bg-blue-400 duration-500 rounded-lg" href="https://www.linkedin.com/in/ziadazzabi/"><img class="w-12 h-auto" src="img/lk.png" alt="LinkedIn_Icon"></a>
+          <a class="hover:bg-blue-400 duration-500 rounded-lg" href="mailto:ziad@azzabi.co.uk"><img class="w-12 h-auto" src="img/email.png" alt="Email_Icon"></a>
+          <a class="hover:bg-blue-400 duration-500 rounded-full" href="https://github.com/za00033"><img class="w-12 h-auto" src="img/git.png" alt="Github_Icon"></a>
         </div>
       </div>
+      <div class="flex items-center pt-5">
+        <p class="mx-auto">Created using 
+          <a class="text-sm hover:bg-blue-400 duration-500" href="https://nodejs.org/">NodeJs</a>, 
+          <a class="text-sm hover:bg-blue-400 duration-500" href="https://expressjs.com/">ExpressJs</a> & 
+          <a class="text-sm hover:bg-blue-400 duration-500" href="https://tailwindcss.com/">TailwindCSS.</a></p>
       </div>
-    </div>
-
+      <div class="flex items-center">
+        <p class="mx-auto">By Ziad Azzabi [2022]</p>
+      </div>
+    </footer>
   </body>
-
-
-
-<script>
-//-----------------------------------------------------------
-/*Adding mobile button show/hide depending on screen size*/
-const btn = document.querySelector("button.mobile-menu-button");
-const menu = document.querySelector(".mobile-menu");
-// Add Event Listeners
-btn.addEventListener("click", () => {
-menu.classList.toggle("hidden");
-});
-
-//--------------------------------------
-/*Adding navbar to show on scroll up*/
-// Callback for IntersectionObserver
-const callback = function (entries) {
-    entries.forEach((entry) => {
-    //console.log(entry);
-    // Is the element in the viewport?
-    if (entry.isIntersecting) {
-        // Add the fadeIn class:
-        entry.target.classList.add("animate-fadeIn1");
-    } else {
-        // Otherwise remove the fadein class
-        entry.target.classList.remove("animate-fadeIn1");
-    }
-    });
-};
-// Set up a new observer
-const observer = new IntersectionObserver(callback);
-// Get all the elements you want to show on scroll
-const targets = document.querySelectorAll(".js-show-on-scroll");
-// Loop through each of the target
-targets.forEach(function (target) {
-    //Hide the element
-    target.classList.add("opacity-0");
-    // Add the element to the watcher
-    observer.observe(target);
-});
-
-
-//--------------------------------------
-/*Change background color on scroll*/
-$(window).scroll(function() {
-  
-  // selectors
-  var $window = $(window),
-      $body = $('body'),
-      $panel = $('.panel');
-  
-  // Change 33% earlier than scroll position so colour is there when you arrive.
-  var scroll = $window.scrollTop() + ($window.height() / 3);
- 
-  $panel.each(function () {
-    var $this = $(this);
-    
-    // if position is within range of this panel.
-    // So position of (position of top of div <= scroll position) && (position of bottom of div > scroll position).
-    // Remember we set the scroll to 33% earlier in scroll var.
-    if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
-          
-      // Remove all classes on body with color-
-      $body.removeClass(function (index, css) {
-        return (css.match (/(^|\s)bg-\S+/g) || []).join(' ');
-      });
-       
-      // Add class of currently active div
-      $body.addClass('bg-' + $(this).data('color'));
-    }
-  });    
-  
-}).scroll();
-
-</script>
-
-
+  <script src="main.js"></script>
 </html>
