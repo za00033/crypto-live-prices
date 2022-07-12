@@ -1,4 +1,3 @@
-
 //-----------------------------------------------------------
 /*Adding mobile button show/hide depending on screen size*/
 const btn = document.querySelector("button.mobile-menu-button");
@@ -70,5 +69,3 @@ $(window).scroll(function() {
 }).scroll();
 
 //-----------------------------------------------------
-
-

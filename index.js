@@ -5,6 +5,17 @@ After editing and run the express node server with html files, steps are:
 2- node index.js (runs the express server)
 */
 
+const http = require("http");
+
+
+
+const CoinGecko = require('coingecko-api');
+
+const CoinGeckoClient = new CoinGecko();
+var func = async() => {
+    let data = await CoinGeckoClient.ping();
+    console.log(data);
+};
 
 const express = require('express');
 
@@ -32,9 +43,18 @@ app.use(express.static(__dirname + '/public'));
 app.get('/', (req, res) => {
     //res.render('index');
     res.sendFile(__dirname + '/views/index.html');
-})
+});
 
+app.get('/ziad', (req, res) => {
+    //res.render('index');
+    res.redirect('http://ziad.azzabi.co.uk');
+});
 
 const server = app.listen(3000, () => {
     console.log(`Express server application started on port ${server.address().port}`);
 });
+
+
+//-----------------------------------------
+
+
